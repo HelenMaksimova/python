@@ -1,5 +1,5 @@
-import random
 import math
+import random
 
 print('My tries coding')
 
@@ -12,3 +12,6 @@ print('Исходный массив случайных чисел от -100 д�
 if_array = [math.sqrt(elem) for elem in test_array if elem > 0 and elem % 2 == 0]
 
 print('Массив корней из чётных чисел:\n', if_array)
+
+with open('text_file.txt', 'a', encoding='utf-8') as f:
+    f.write('Новая запись\n')
