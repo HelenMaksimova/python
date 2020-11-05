@@ -6,9 +6,7 @@ test_list = input('Ведите список элементов через за�
 
 print(f'Исходный список:{test_list}')
 
-list_len = len(test_list) if len(test_list) % 2 == 0 else len(test_list) - 1
-
-for i in range(0, list_len, 2):
+for i in range(0, len(test_list) - 1, 2):
     test_list[i], test_list[i+1] = test_list[i+1], test_list[i]
 
 print(f'Результат обмена значений:{test_list}')

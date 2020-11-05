@@ -49,3 +49,22 @@ for key, value in months_dict.items():
         break
 
 print(f'Нынче на дворе {result}')
+
+# Другое решение со словарём:
+
+try:
+    user_num = int(input('Введите номер месяца (целое число от 1 до 12): '))
+except ValueError:
+    print('Необходимо ввести число от 1 до 12!')
+    user_num = 0
+
+months_dict_new = {
+    1: 'зима', 2: 'зима', 3: 'весна',
+    4: 'весна', 5: 'весна', 6: 'лето',
+    7: 'лето', 8: 'лето', 9: 'осень',
+    10: 'осень', 11: 'осень', 12: 'зима'
+}
+
+result = months_dict_new[user_num] if user_num in months_dict_new.keys() else 'неизвестное науке время года'
+
+print(f'Нынче на дворе {result}')
